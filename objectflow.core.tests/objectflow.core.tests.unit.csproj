@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <SignAssembly>false</SignAssembly>
-    <AssemblyOriginatorKeyFile>debugKey.snk</AssemblyOriginatorKeyFile>
+    
     <FileUpgradeFlags />
     <UpgradeBackupLocation />
     <AssemblyTitle>ObjectFlow Tests</AssemblyTitle>

@@ -29,7 +29,7 @@
     <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>debugKey.snk</AssemblyOriginatorKeyFile>
+    
   </PropertyGroup>
   <PropertyGroup />
   <ItemGroup>

@@ -5,7 +5,7 @@
     <TargetFramework>net35</TargetFramework>
     <StyleCopTreatErrorsAsWarnings>true</StyleCopTreatErrorsAsWarnings>
     <SignAssembly>false</SignAssembly>
-    <AssemblyOriginatorKeyFile>debugKey.snk</AssemblyOriginatorKeyFile>
+    
     <ApplicationIcon />
     <CodeContractsAssemblyMode>0</CodeContractsAssemblyMode>
     <FileUpgradeFlags />
