@@ -26,7 +26,7 @@
     <OutputPath>..\compile\NunitExtensions\bin\$(Configuration)\</OutputPath>
   </PropertyGroup>
   <PropertyGroup>
-    <SignAssembly>true</SignAssembly>
+    <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
     <AssemblyOriginatorKeyFile>debugKey.snk</AssemblyOriginatorKeyFile>
@@ -34,9 +34,6 @@
   <PropertyGroup />
   <ItemGroup>
     <Reference Include="System.Data.DataSetExtensions" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="debugKey.snk" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="NUnit" Version="2.5.7.10213" />
