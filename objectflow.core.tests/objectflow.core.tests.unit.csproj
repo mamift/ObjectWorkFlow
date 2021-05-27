@@ -28,6 +28,11 @@
     <OutputPath>..\compile\objectflow.core.tests\bin\$(Configuration)\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Remove="obj\**" />
+    <EmbeddedResource Remove="obj\**" />
+    <None Remove="obj\**" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\NunitExtensions\NunitExtensions.csproj" />
     <ProjectReference Include="..\objectflow.core\objectflow.core.csproj" />
   </ItemGroup>
@@ -42,6 +47,7 @@
     <Compile Remove="TestDomain\DoubleSpace.cs" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.10.0" />
     <PackageReference Include="Moq" Version="4.16.1" />
     <PackageReference Include="NUnit" Version="3.13.2" />
     <PackageReference Include="RhinoMocks" Version="3.6.1" />
