@@ -33,9 +33,6 @@
   </PropertyGroup>
   <PropertyGroup />
   <ItemGroup>
-    <Reference Include="System.Data.DataSetExtensions" />
-  </ItemGroup>
-  <ItemGroup>
     <PackageReference Include="NUnit" Version="2.5.7.10213" />
   </ItemGroup>
 </Project>

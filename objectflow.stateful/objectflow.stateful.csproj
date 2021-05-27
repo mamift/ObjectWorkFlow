@@ -20,9 +20,6 @@
     <DocumentationFile>D:\code\MKO\Components\References\kpa.framework\References\objectflow\compile\objectflow.stateful\bin\$(Configuration)\objectflow.stateful.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System.Data.DataSetExtensions" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\objectflow.core\objectflow.core.csproj" />
   </ItemGroup>
 </Project>

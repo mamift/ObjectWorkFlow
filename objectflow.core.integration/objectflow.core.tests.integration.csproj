@@ -33,9 +33,6 @@
     <OutputPath>..\compile\objectflow.core.integration\bin\$(Configuration)\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System.Data.DataSetExtensions" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\NunitExtensions\NunitExtensions.csproj" />
     <ProjectReference Include="..\objectflow.core\objectflow.core.csproj" />
   </ItemGroup>
