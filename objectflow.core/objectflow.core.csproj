@@ -1,38 +1,23 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.21022</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{18BFC8BB-222C-4FB4-A949-36EF486E2D23}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Rainbow.ObjectFlow</RootNamespace>
-    <AssemblyName>objectflow.core</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFramework>net35</TargetFramework>
     <StyleCopTreatErrorsAsWarnings>true</StyleCopTreatErrorsAsWarnings>
-    <FileAlignment>512</FileAlignment>
     <SignAssembly>true</SignAssembly>
-    <DelaySign>false</DelaySign>
     <AssemblyOriginatorKeyFile>debugKey.snk</AssemblyOriginatorKeyFile>
-    <ApplicationIcon>
-    </ApplicationIcon>
+    <ApplicationIcon />
     <CodeContractsAssemblyMode>0</CodeContractsAssemblyMode>
-    <FileUpgradeFlags>
-    </FileUpgradeFlags>
-    <OldToolsVersion>3.5</OldToolsVersion>
+    <FileUpgradeFlags />
     <UpgradeBackupLocation />
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <BaseIntermediateOutputPath>..\compile\objectflow.core\obj\</BaseIntermediateOutputPath>
+    <PostBuildEvent />
+    <PostBuildEvent />
+    <PostBuildEvent />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <BaseIntermediateOutputPath>..\compile\objectflow.core\obj\</BaseIntermediateOutputPath>
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>portable</DebugType>
-    <Optimize>false</Optimize>
     <OutputPath>..\compile\objectflow.core\bin\debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
     <DocumentationFile>..\compile\objectflow.core\bin\debug\objectflow.core.XML</DocumentationFile>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <CodeContractsEnableRuntimeChecking>False</CodeContractsEnableRuntimeChecking>
@@ -48,119 +33,37 @@
     <CodeContractsShowSquigglies>False</CodeContractsShowSquigglies>
     <CodeContractsUseBaseLine>False</CodeContractsUseBaseLine>
     <CodeContractsEmitXMLDocs>False</CodeContractsEmitXMLDocs>
-    <CodeContractsCustomRewriterAssembly>
-    </CodeContractsCustomRewriterAssembly>
-    <CodeContractsCustomRewriterClass>
-    </CodeContractsCustomRewriterClass>
-    <CodeContractsLibPaths>
-    </CodeContractsLibPaths>
-    <CodeContractsExtraRewriteOptions>
-    </CodeContractsExtraRewriteOptions>
-    <CodeContractsExtraAnalysisOptions>
-    </CodeContractsExtraAnalysisOptions>
-    <CodeContractsBaseLineFile>
-    </CodeContractsBaseLineFile>
+    <CodeContractsCustomRewriterAssembly />
+    <CodeContractsCustomRewriterClass />
+    <CodeContractsLibPaths />
+    <CodeContractsExtraRewriteOptions />
+    <CodeContractsExtraAnalysisOptions />
+    <CodeContractsBaseLineFile />
     <CodeContractsRuntimeCheckingLevel>Full</CodeContractsRuntimeCheckingLevel>
     <CodeContractsReferenceAssembly>%28none%29</CodeContractsReferenceAssembly>
     <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
     <FileAlignment>4096</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <BaseIntermediateOutputPath>..\compile\objectflow.core\obj\</BaseIntermediateOutputPath>
-    <DebugType>portable</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\compile\objectflow.core\bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <DocumentationFile>..\compile\objectflow.core\bin\Release\objectflow.core.XML</DocumentationFile>
+    <OutputPath>..\compile\objectflow.core\bin\$(Configuration)\</OutputPath>
+    <DocumentationFile>..\compile\objectflow.core\bin\$(Configuration)\objectflow.core.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent />
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Core">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="System.Xml.Linq">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="System.Data.DataSetExtensions">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
+    <Reference Include="System.Data.DataSetExtensions" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\AssemblyInfo.cs">
-      <Link>Properties\AssemblyInfo.cs</Link>
-    </Compile>
-    <Compile Include="Constraints\BranchCondition.cs" />
-    <Compile Include="Engine\DeclaredOperation.cs" />
-    <Compile Include="Engine\BuilderActivators.cs" />
-    <Compile Include="Engine\ParameterizedFunctionInvoker.cs" />
-    <Compile Include="Engine\ParameterizedOperationDuplex.cs" />
-    <Compile Include="Framework\DefaultErrorHandler.cs" />
-    <Compile Include="Framework\EarlyExitException.cs" />
-    <Compile Include="Interfaces\IErrorHandler.cs" />
-    <Compile Include="Framework\AsAWorkflow.cs" />
-    <Compile Include="Helpers\Declare.cs" />
-    <Compile Include="Interfaces\IConfigureSequence.cs" />
-    <Compile Include="Interfaces\IDeclaredOperation.cs" />
-    <Compile Include="Interfaces\IExecuteWorkflow.cs" />
-    <Compile Include="Policies\Repeat.cs" />
-    <Compile Include="Language\IRepeat.cs" />
-    <Compile Include="Properties\CommonAssemblyInfo.cs" />
-    <Compile Include="Constraints\Condition.cs" />
-    <Compile Include="Constraints\ConditionT.cs" />
-    <Compile Include="Constraints\Operators\ConstraintOperator.cs" />
-    <Compile Include="Constraints\Operators\NotConstraintOperator.cs" />
-    <Compile Include="Engine\ExecutionPlan.cs" />
-    <Compile Include="Engine\ParalelInvoker.cs" />
-    <Compile Include="Engine\TaskList.cs" />
-    <Compile Include="Engine\WorkflowInvoker.cs" />
-    <Compile Include="Framework\Check.cs" />
-    <Compile Include="Engine\MethodInvoker.cs" />
-    <Compile Include="Engine\FunctionInvoker.cs" />
-    <Compile Include="Engine\OperationInvoker.cs" />
-    <Compile Include="Engine\SequentialBuilder.cs" />
-    <Compile Include="Engine\ParallelBuilder.cs" />
-    <Compile Include="Engine\Dispatcher.cs" />
-    <Compile Include="Engine\OperationDuplex.cs" />
-    <Compile Include="Language\ICompose.cs" />
-    <Compile Include="Language\IMerge.cs" />
-    <Compile Include="Language\IDefine.cs" />
-    <Compile Include="Language\IHideObjectMembers.cs" />
-    <Compile Include="Language\IExpression.cs" />
-    <Compile Include="Language\IInterval.cs" />
-    <Compile Include="Language\IRetryPolicy.cs" />
-    <Compile Include="Language\ITimePart.cs" />
-    <Compile Include="Language\IWith.cs" />
-    <Compile Include="Policies\Interval.cs" />
-    <Compile Include="Policies\NonTerminatingPolicy.cs" />
-    <Compile Include="Policies\Policy.cs" />
-    <Compile Include="Policies\Retry.cs" />
-    <Compile Include="Framework\WorkflowMemoryLoader.cs" />
-    <Compile Include="Helpers\If.cs" />
-    <Compile Include="Framework\BasicOperation.cs" />
-    <Compile Include="Engine\WorkflowBuilder.cs" />
-    <Compile Include="Interfaces\ICheckConstraint.cs" />
-    <Compile Include="Interfaces\IPolicy.cs" />
-    <Compile Include="Interfaces\IWorkFlow.cs" />
-    <Compile Include="Interfaces\IOperation.cs" />
-    <Compile Include="Framework\Workflow.cs" />
+    <Compile Include="..\AssemblyInfo.cs" Link="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="debugKey.snk" />
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
-  <PropertyGroup>
-    <PostBuildEvent>
-    </PostBuildEvent>
-  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="ConstraintOperators\ConstraintOperator.cs" />
+    <Compile Remove="ConstraintOperators\NotConstraintOperator.cs" />
+    <Compile Remove="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
 </Project>

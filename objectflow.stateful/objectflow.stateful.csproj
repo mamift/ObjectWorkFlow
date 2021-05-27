@@ -1,94 +1,28 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{D8C4D517-ECAA-4706-A79C-0A55EA443A17}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Rainbow.ObjectFlow.Stateful</RootNamespace>
-    <AssemblyName>objectflow.stateful</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
+    <TargetFramework>net35</TargetFramework>
+    <AssemblyTitle>objectflow.stateful</AssemblyTitle>
+    <Product>objectflow.stateful</Product>
+    <Copyright>Copyright © Tim Kellogg 2011</Copyright>
+    <Version>0.6</Version>
+    <AssemblyVersion>0.6.0</AssemblyVersion>
+    <FileVersion>0.6.0.0</FileVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>portable</DebugType>
-    <Optimize>false</Optimize>
     <OutputPath>..\compile\objectflow.stateful\bin\debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <DocumentationFile>..\compile\objectflow.stateful\bin\debug\objectflow.stateful.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>portable</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>..\compile\objectflow.stateful\bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <DocumentationFile>D:\code\MKO\Components\References\kpa.framework\References\objectflow\compile\objectflow.stateful\bin\Release\objectflow.stateful.XML</DocumentationFile>
+    <OutputPath>..\compile\objectflow.stateful\bin\$(Configuration)\</OutputPath>
+    <DocumentationFile>D:\code\MKO\Components\References\kpa.framework\References\objectflow\compile\objectflow.stateful\bin\$(Configuration)\objectflow.stateful.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Components\AbstractTransitionGateway.cs" />
-    <Compile Include="Components\RelaxedTransitionGateway.cs" />
-    <Compile Include="Components\StrictTransitionGateway.cs" />
-    <Compile Include="Framework\AbstractBranchingCondition.cs" />
-    <Compile Include="Framework\AdvancedBranchingExpression.cs" />
-    <Compile Include="Framework\BranchingExpression.cs" />
-    <Compile Include="DefaultTransitionGateway.cs" />
-    <Compile Include="Framework\FailureExpression.cs" />
-    <Compile Include="Framework\IFailureExpression.cs" />
-    <Compile Include="Framework\ISecurityConfigurationExpresion.cs" />
-    <Compile Include="Framework\ITransitionListProvider.cs" />
-    <Compile Include="HelperExtensions.cs" />
-    <Compile Include="Framework\IBranchingExpression.cs" />
-    <Compile Include="Framework\IConfigurationExpression.cs" />
-    <Compile Include="IStatefulObject.cs" />
-    <Compile Include="IStatefulWorkflow.cs" />
-    <Compile Include="IStateObserver.cs" />
-    <Compile Include="ITransition.cs" />
-    <Compile Include="ITransitionGateway.cs" />
-    <Compile Include="ITransitionRule.cs" />
-    <Compile Include="IWorkflowMediator.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StatefulBuilder.cs" />
-    <Compile Include="StatefulErrorHandler.cs" />
-    <Compile Include="StatefulWorkflow.Configuration.cs" />
-    <Compile Include="StatefulWorkflow.cs" />
-    <Compile Include="StatefulWorkflowExtensions.cs" />
-    <Compile Include="Transition.cs" />
-    <Compile Include="DefaultTransitionRule.cs" />
-    <Compile Include="UnallowedTransitionException.cs" />
-    <Compile Include="WorkflowActionFailedException.cs" />
-    <Compile Include="WorkflowMediator.cs" />
+    <ProjectReference Include="..\objectflow.core\objectflow.core.csproj" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\objectflow.core\objectflow.core.csproj">
-      <Project>{18BFC8BB-222C-4FB4-A949-36EF486E2D23}</Project>
-      <Name>objectflow.core</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup />
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
 </Project>
