@@ -56,7 +56,7 @@ namespace objectflow.core.tests.integration.RepeatUntil
             _result.ShouldBe("ABABABAB");
         }
 
-        [Observation, Ignore]
+        [Observation, Ignore("Next release")]
         public void RepeatUntilCondition()
         {
             // TODO: next release

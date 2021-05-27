@@ -2,7 +2,7 @@
   <PropertyGroup>
     <ProductVersion>9.0.21022</ProductVersion>
     <RootNamespace>Rainbow.ObjectFlow</RootNamespace>
-    <TargetFramework>net35</TargetFramework>
+    <TargetFrameworks>net35;netstandard2</TargetFrameworks>
     <StyleCopTreatErrorsAsWarnings>true</StyleCopTreatErrorsAsWarnings>
     <SignAssembly>false</SignAssembly>
     

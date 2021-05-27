@@ -2,7 +2,7 @@
   <PropertyGroup>
     <ProductVersion>8.0.30703</ProductVersion>
     <RootNamespace>Rainbow.ObjectFlow.Stateful.tests</RootNamespace>
-    <TargetFramework>net35</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
     <AssemblyTitle>objectflow.stateful.tests.unit</AssemblyTitle>
     <Company>Microsoft</Company>
     <Product>objectflow.stateful.tests.unit</Product>
@@ -11,7 +11,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Moq" Version="4.0.10827" />
-    <PackageReference Include="NUnit" Version="2.5.7.10213" />
+    <PackageReference Include="NUnit" Version="3.13.2" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Moq">

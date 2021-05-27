@@ -2,7 +2,7 @@
   <PropertyGroup>
     <ProductVersion>8.0.30703</ProductVersion>
     <RootNamespace>Rainbow.ObjectFlow.Stateful</RootNamespace>
-    <TargetFramework>net35</TargetFramework>
+    <TargetFrameworks>net35;netstandard2</TargetFrameworks>
     <AssemblyTitle>objectflow.stateful</AssemblyTitle>
     <Product>objectflow.stateful</Product>
     <Copyright>Copyright © Tim Kellogg 2011</Copyright>

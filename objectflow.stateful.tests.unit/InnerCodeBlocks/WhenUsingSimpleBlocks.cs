@@ -27,8 +27,8 @@ namespace Rainbow.ObjectFlow.Stateful.tests.InnerCodeBlocks
 
 
 		[Observation]
-		[TestCase(false, Result = 0)]
-		[TestCase(true, Result = 2)]
+		[TestCase(false, ExpectedResult = 0)]
+		[TestCase(true, ExpectedResult = 2)]
 		public int multiple_workflow_steps_are_executed_conditionally(bool branch)
 		{
 			int hitInnerBranch = 0, hitOutterBranch = 0;

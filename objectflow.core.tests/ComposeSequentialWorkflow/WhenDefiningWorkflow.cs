@@ -44,7 +44,7 @@ namespace Objectflow.core.tests.ComposeSequentialWorkflow
         {
             Exception exception = Assert.Throws<ArgumentNullException>(() => _workflow.Do(_doubleSpace, null));
 
-            Assert.That(exception.Message, Is.StringContaining("Argument [constraint] cannot be null"));
+            Assert.That(exception.Message, Does.Contain("Argument [constraint] cannot be null"));
         }
 
         [Observation]
@@ -53,7 +53,7 @@ namespace Objectflow.core.tests.ComposeSequentialWorkflow
             const IOperation<Colour> operation = null;
             Exception exception = Assert.Throws<ArgumentNullException>(() => _workflow.Do(operation, If.IsTrue(true)));
 
-            Assert.That(exception.Message, Is.StringContaining("Argument [operation] cannot be null"));
+            Assert.That(exception.Message, Does.Contain("Argument [operation] cannot be null"));
         }
 
         [Observation]
@@ -62,7 +62,7 @@ namespace Objectflow.core.tests.ComposeSequentialWorkflow
             const IOperation<Colour> operation = null;
             Exception exception = Assert.Throws<ArgumentNullException>(() => _workflow.Do(operation, null));
 
-            Assert.That(exception.Message, Is.StringContaining("Argument [operation] cannot be null"));
+            Assert.That(exception.Message, Does.Contain("Argument [operation] cannot be null"));
         }
 
         [Observation]

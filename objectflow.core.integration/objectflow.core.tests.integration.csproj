@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <ProductVersion>9.0.21022</ProductVersion>
-    <TargetFramework>net35</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
     <AssemblyOriginatorKeyFile />
     <FileUpgradeFlags />
     <UpgradeBackupLocation />
@@ -40,6 +40,6 @@
     <Compile Remove="WhenDefiningWorkflows.cs" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="NUnit" Version="2.5.7.10213" />
+    <PackageReference Include="NUnit" Version="3.13.2" />
   </ItemGroup>
 </Project>

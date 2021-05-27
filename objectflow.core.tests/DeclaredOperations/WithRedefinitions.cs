@@ -11,13 +11,14 @@ namespace Objectflow.core.tests.DeclaredOperations
     public class WithRedefinitions : Specification
     {
         [Observation]
-        [ExpectedException(typeof(InvalidOperationException))]
         public void RedefinitionThrowsException()
         {
-            var op = Declare.Step();
-            new Workflow<string>()
-            .Do(x => x, op)
-            .Do(x => x, op);
+            Assert.Throws<InvalidOperationException>(() => {
+                var op = Declare.Step();
+                new Workflow<string>()
+                    .Do(x => x, op)
+                    .Do(x => x, op);
+            });
         }
     }
 }
