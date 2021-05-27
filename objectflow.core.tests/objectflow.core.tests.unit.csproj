@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <SignAssembly>true</SignAssembly>
+    <SignAssembly>false</SignAssembly>
     <AssemblyOriginatorKeyFile>debugKey.snk</AssemblyOriginatorKeyFile>
     <FileUpgradeFlags />
     <UpgradeBackupLocation />
@@ -33,9 +33,6 @@
   <ItemGroup>
     <ProjectReference Include="..\NunitExtensions\NunitExtensions.csproj" />
     <ProjectReference Include="..\objectflow.core\objectflow.core.csproj" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="debugKey.snk" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="FunctionalWorkflows\WhenConfiguringWithFunctions.cs" />

@@ -4,7 +4,7 @@
     <RootNamespace>Rainbow.ObjectFlow</RootNamespace>
     <TargetFramework>net35</TargetFramework>
     <StyleCopTreatErrorsAsWarnings>true</StyleCopTreatErrorsAsWarnings>
-    <SignAssembly>true</SignAssembly>
+    <SignAssembly>false</SignAssembly>
     <AssemblyOriginatorKeyFile>debugKey.snk</AssemblyOriginatorKeyFile>
     <ApplicationIcon />
     <CodeContractsAssemblyMode>0</CodeContractsAssemblyMode>
@@ -57,9 +57,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\AssemblyInfo.cs" Link="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="debugKey.snk" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="ConstraintOperators\ConstraintOperator.cs" />
